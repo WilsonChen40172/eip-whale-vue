@@ -1,5 +1,7 @@
 <template>
   <div class="hello">
+    <button @click="plusCount">Plus</button>
+    <p>{{ count }}</p>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -95,16 +97,28 @@
 </template>
 
 <script>
+import store from "../store/index";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
   },
+  methods: {
+    plusCount: function () {
+      // alert("被點擊了");
+      store.commit("increment");
+    },
+  },
+  computed: {
+    count() {
+      return store.state.count;
+    },
+  },
 };
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 h3 {
   margin: 40px 0 0;
 }
@@ -117,6 +131,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #42b983;
+  color: #331122;
 }
 </style>
