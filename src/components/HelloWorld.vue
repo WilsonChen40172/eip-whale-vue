@@ -1,7 +1,5 @@
 <template>
   <div class="hello">
-    <button @click="plusCount">Plus</button>
-    <p>{{ count }}</p>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -18,6 +16,14 @@
           target="_blank"
           rel="noopener"
           >babel</a
+        >
+      </li>
+      <li>
+        <a
+          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-router"
+          target="_blank"
+          rel="noopener"
+          >router</a
         >
       </li>
       <li>
@@ -97,22 +103,10 @@
 </template>
 
 <script>
-import store from "../store/index";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
-  },
-  methods: {
-    plusCount: function () {
-      // alert("被點擊了");
-      store.commit("increment");
-    },
-  },
-  computed: {
-    count() {
-      return store.state.count;
-    },
   },
 };
 </script>
@@ -131,6 +125,6 @@ li {
   margin: 0 10px;
 }
 a {
-  color: #331122;
+  color: #42b983;
 }
 </style>
