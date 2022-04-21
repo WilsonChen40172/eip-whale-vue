@@ -1,5 +1,8 @@
 <template>
   <div class="hello">
+    <button @click="plusCount">Plus</button>
+    <p>{{ count }}</p>
+    <p>{{ userName || "nothing" }}</p>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -103,10 +106,25 @@
 </template>
 
 <script>
+import store from "../store/index";
 export default {
   name: "HelloWorld",
   props: {
     msg: String,
+  },
+  methods: {
+    plusCount: function () {
+      // alert("被點擊了");
+      store.commit("increment");
+    },
+  },
+  computed: {
+    count() {
+      return store.state.count;
+    },
+    userName() {
+      return store.state.userName;
+    },
   },
 };
 </script>

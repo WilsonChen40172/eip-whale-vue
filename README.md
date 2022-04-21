@@ -25,3 +25,4 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ### install
 npm install sass-loader node-sass --save-dev
+vue.config.js -> add -> publicPath: './' (screen is blank after fixing build)
