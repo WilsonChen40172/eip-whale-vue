@@ -1,2 +1,0 @@
-"use strict";(self["webpackChunkeip_whale_vue"]=self["webpackChunkeip_whale_vue"]||[]).push([[443],{7381:function(e,n,u){u.r(n),u.d(n,{default:function(){return o}});var a=u(3396);const t={class:"about"},r=(0,a._)("h1",null,"This is an about page",-1),s=[r];function i(e,n){return(0,a.wg)(),(0,a.iD)("div",t,s)}var c=u(89);const l={},h=(0,c.Z)(l,[["render",i]]);var o=h}}]);
-//# sourceMappingURL=about.8dadb1e4.js.map
